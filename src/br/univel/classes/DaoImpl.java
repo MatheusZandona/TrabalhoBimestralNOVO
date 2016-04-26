@@ -57,7 +57,7 @@ public class DaoImpl implements Dao<Cliente, Integer>{
 				c.setNome(resultados.getString("cli_nome"));
 				c.setEndereco(resultados.getString("cli_endereco"));
 				c.setTelefone(resultados.getString("cli_fone"));
-				c.setEstadocivil(EstadoCivil.getPorCodigo(resultados.getInt("cli_estcivil")));
+				c.setEstadocivil(EstadoCivil.getPorid(resultados.getInt("cli_estcivil")));
 			}			
 			
 			ps.close();
@@ -127,7 +127,7 @@ public class DaoImpl implements Dao<Cliente, Integer>{
 				c.setNome(resultados.getString("cli_nome"));
 				c.setEndereco(resultados.getString("cli_endereco"));
 				c.setTelefone(resultados.getString("cli_fone"));
-				c.setEstadocivil(EstadoCivil.getPorCodigo(resultados.getInt("cli_estcivil")));
+				c.setEstadocivil(EstadoCivil.getPorid(resultados.getInt("cli_estcivil")));
 				
 				listaCliente.add(c);
 			}			

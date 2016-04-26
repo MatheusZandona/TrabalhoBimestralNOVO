@@ -6,7 +6,7 @@ public enum EstadoCivil {
 	Casado,
 	Viuvo;
 
-	public static final EstadoCivil getPorCodigo(int value){
+	public static final EstadoCivil getPorid(int value){
         for (EstadoCivil item : EstadoCivil.values()) {
             if (item.ordinal() == value) {
             	return item;
