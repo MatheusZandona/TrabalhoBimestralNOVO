@@ -1,4 +1,4 @@
-package br.univel.basico;
+package br.univel.classes;
 
 import br.unive.anotacoes.Coluna;
 import br.unive.anotacoes.Tabela;
