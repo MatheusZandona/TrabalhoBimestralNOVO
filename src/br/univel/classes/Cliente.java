@@ -3,7 +3,6 @@ package br.univel.classes;
 import br.unive.anotacoes.Coluna;
 import br.unive.anotacoes.Tabela;
 
-// acessar para estudar projeto Lucas Medeiros https://github.com/LucasMedeiros10/Trabalho1BimJava
 
 @Tabela("Cliente")
 public class Cliente {
