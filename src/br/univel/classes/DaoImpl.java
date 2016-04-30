@@ -53,11 +53,11 @@ public class DaoImpl implements Dao<Cliente, Integer>{
 			ResultSet resultados = ps.executeQuery();
 			
 			while (resultados.next()) {
-				c.setId(resultados.getInt("cli_codigo"));
-				c.setNome(resultados.getString("cli_nome"));
-				c.setEndereco(resultados.getString("cli_endereco"));
-				c.setTelefone(resultados.getString("cli_fone"));
-				c.setEstadocivil(EstadoCivil.getPorid(resultados.getInt("cli_estcivil")));
+				c.setId(resultados.getInt("id"));
+				c.setNome(resultados.getString("clinome"));
+				c.setEndereco(resultados.getString("cliendereco"));
+				c.setTelefone(resultados.getString("clitelefone"));
+				c.setEstadocivil(EstadoCivil.getPorid(resultados.getInt("cliestadocivil")));
 			}			
 			
 			ps.close();
@@ -113,7 +113,7 @@ public class DaoImpl implements Dao<Cliente, Integer>{
 	@Override
 	public List<Cliente> listarTodos() {
 		SqlGenImpl gerador = new SqlGenImpl();
-		List<Cliente> listaCliente = new ArrayList<Cliente>();
+		List<Cliente> listaClientes = new ArrayList<Cliente>();
 		
 		try {
 
@@ -122,14 +122,14 @@ public class DaoImpl implements Dao<Cliente, Integer>{
 			
 			while (resultados.next()) {
 				
-				Cliente c = new Cliente();
-				c.setId(resultados.getInt("cli_codigo"));
-				c.setNome(resultados.getString("cli_nome"));
-				c.setEndereco(resultados.getString("cli_endereco"));
-				c.setTelefone(resultados.getString("cli_fone"));
-				c.setEstadocivil(EstadoCivil.getPorid(resultados.getInt("cli_estcivil")));
+				Cliente cli = new Cliente();
+				cli.setId(resultados.getInt("id"));
+				cli.setNome(resultados.getString("clinome"));
+				cli.setEndereco(resultados.getString("cliendereco"));
+				cli.setTelefone(resultados.getString("clitelefone"));
+				cli.setEstadocivil(EstadoCivil.getPorid(resultados.getInt("cliestadocivil")));
 				
-				listaCliente.add(c);
+				listaClientes.add(cli);
 			}			
 			
 			ps.close();
@@ -139,7 +139,7 @@ public class DaoImpl implements Dao<Cliente, Integer>{
 			e.printStackTrace();
 		}				
 		
-		return listaCliente;
+		return listaClientes;
 	}
 	
 	public void criarTabela(Cliente t){

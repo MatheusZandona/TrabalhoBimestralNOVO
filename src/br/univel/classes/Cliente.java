@@ -8,7 +8,7 @@ import br.unive.anotacoes.Tabela;
 @Tabela("Cliente")
 public class Cliente {
 	
-	@Coluna(pk=true)
+	@Coluna(nome="ID",pk=true)
 	private int id;
 	
 	@Coluna(nome="CLINOME")

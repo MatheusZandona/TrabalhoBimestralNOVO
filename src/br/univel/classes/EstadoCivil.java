@@ -6,12 +6,12 @@ public enum EstadoCivil {
 	Casado,
 	Viuvo;
 
-	public static final EstadoCivil getPorid(int value){
-        for (EstadoCivil item : EstadoCivil.values()) {
-            if (item.ordinal() == value) {
-            	return item;
+	public static final EstadoCivil getPorid(int valor){
+        for (EstadoCivil ec : EstadoCivil.values()) {
+            if (ec.ordinal() == valor) {
+            	return ec;
             }
         }
-		throw new RuntimeException("Valor não encontrado: " + value);
+		throw new RuntimeException("Valor não encontrado: " + valor);
 	}
 }
