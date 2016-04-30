@@ -2,7 +2,7 @@ package br.univel.classes;
 
 import br.unive.anotacoes.Coluna;
 import br.unive.anotacoes.Tabela;
-
+ 
 
 @Tabela("Cliente")
 public class Cliente {
